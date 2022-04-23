@@ -1,0 +1,35 @@
+<html>
+<head>
+ <title>Froggy</title>
+</head>
+<body>
+ <h1>Froggy</h1>
+ <canvas id="myCanvas" width="300" height="300"
+style="border:1px solid #000000;">
+</canvas>
+
+<script>
+var username = prompt("What is your username?");
+
+var skin = "https://minotar.net/skin/" + username;
+
+var img = new Image();
+img.src = skin;
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+img.onload = function() {
+  ctx.drawImage(img, 0, 0);
+}
+
+var hat = new Image();
+hat.src = "https://sharkey300.github.io/frog-hat.png/";
+
+hat.onload = function() {
+  ctx.drawImage(hat, 0, 0);
+}
+</script>
+
+</body>
+</html>
