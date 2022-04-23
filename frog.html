@@ -21,13 +21,13 @@ var ctx = c.getContext("2d");
 
 img.onload = function() {
   ctx.drawImage(img, 0, 0);
-}
+  
+  var hat = new Image();
+  hat.src = "https://sharkey300.github.io/frog-hat.png/";
 
-var hat = new Image();
-hat.src = "https://sharkey300.github.io/frog-hat.png";
-
-hat.onload = function() {
-  ctx.drawImage(hat, 0, 0);
+  hat.onload = function() {
+    ctx.drawImage(hat, 0, 0);
+  }
 }
 </script>
 
