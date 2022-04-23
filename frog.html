@@ -14,7 +14,6 @@ var username = prompt("What is your username?");
 var skin = "https://minotar.net/skin/" + username;
 
 var img = new Image();
-img.crossOrigin = 'Anonymous';
 img.src = skin;
 
 var c = document.getElementById("myCanvas");
@@ -24,21 +23,11 @@ img.onload = function() {
   ctx.drawImage(img, 0, 0);
   
   var hat = new Image();
-  hat.crossOrigin = 'Anonymous';
   hat.src = "https://sharkey300.github.io/frog-hat.png";
 
   hat.onload = function() {
     ctx.drawImage(hat, 0, 0);
   }
-}
-</script>
-
-<button onclick="downloadCanvas(this, 'myCanvas')">Download</button>
-
- <script>
-function downloadCanvas(link, canvasId) {
-  link.href = document.getElementById(canvasId).toDataURL();
-  link.download = "my-frog-hat.png";
 }
 </script>
 
