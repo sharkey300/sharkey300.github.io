@@ -31,5 +31,14 @@ img.onload = function() {
 }
 </script>
 
+<button onclick="downloadCanvas(this, 'myCanvas')">Download</button>
+
+<script>
+function downloadCanvas(link, canvasId) {
+  link.href = document.getElementById(canvasId).toDataURL();
+  link.download = "my-frog-hat.png";
+}
+</script>
+
 </body>
 </html>
