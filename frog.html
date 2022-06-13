@@ -26,6 +26,8 @@ img.onload = function() {
   hat.src = "https://sharkey300.github.io/frog-hat.png";
 
   hat.onload = function() {
+    ctx.clearRect(32,8,32,4);
+    ctx.clearRect(40,0,8,8);
     ctx.drawImage(hat, 0, 0);
   }
 }
