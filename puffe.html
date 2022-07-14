@@ -1,0 +1,37 @@
+<html>
+<head>
+ <title>Puffe</title>
+</head>
+<body>
+ <h1>Puffe</h1>
+ <canvas id="myCanvas" width="64" height="64"
+style="border:1px solid #000000;">
+</canvas>
+
+<script>
+var username = prompt("What is your username?");
+
+var skin = "https://minotar.net/skin/" + username;
+
+var img = new Image();
+img.src = skin;
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+img.onload = function() {
+  ctx.drawImage(img, 0, 0);
+  
+  var hat = new Image();
+  hat.src = "https://sharkey300.github.io/puffe-hat.png";
+
+  hat.onload = function() {
+    ctx.clearRect(32,8,32,4);
+    ctx.clearRect(40,0,8,8);
+    ctx.drawImage(hat, 0, 0);
+  }
+}
+</script>
+
+</body>
+</html>
